@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/peterjosling/peterjosling.com",
   "devDependencies": {
+    "autoprefixer-core": "^4.0.1",
     "grunt": "^0.4.5",
     "grunt-contrib-cssmin": "^0.10.0",
     "grunt-contrib-less": "^0.12.0",
-    "grunt-contrib-watch": "^0.6.1"
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-postcss": "^0.2.0"
   }
 }
