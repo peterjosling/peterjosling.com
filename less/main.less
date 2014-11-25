@@ -78,6 +78,7 @@ a {
 
 	section {
 		padding: 20px 40px;
+		max-width: 530px;
 
 		p {
 			padding: 0 20px;
@@ -123,4 +124,32 @@ h3 {
 	font-size: 20px;
 	font-weight: 200;
 	font-style: italic;
+}
+
+.twitter, .github, .email {
+	color: #CFCFCF;
+	display: inline-block;
+	font-size: 18px;
+	margin-right: 5px;
+}
+
+.twitter, .github {
+	font-family: FontAwesome;
+}
+
+.email {
+	font-size: 16px;
+	font-family: Arial, sans-serif;
+}
+
+.twitter:before {
+	content: '\f099';
+}
+
+.github:before {
+	content: '\f09b';
+}
+
+.email:before {
+	content: '@';
 }
