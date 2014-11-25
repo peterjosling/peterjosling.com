@@ -1,3 +1,5 @@
+var autoprefixer = require('autoprefixer-core');
+
 module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -17,6 +19,15 @@ module.exports = function(grunt) {
 			}
 		},
 
+		postcss: {
+			options: {
+				processors: [
+					autoprefixer({ browsers: ['last 2 version'] }).postcss
+				]
+			},
+			dist: { src: 'dist/*.css' }
+		},
+
 		cssmin: {
 			dist: {
 				expand: true,
@@ -30,14 +41,15 @@ module.exports = function(grunt) {
 		watch: {
 			scripts: {
 				files: ['**/*.less'],
-				tasks: ['less', 'cssmin']
+				tasks: ['less', 'postcss', 'cssmin']
 			}
 		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-less');
+	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['less', 'cssmin']);
+	grunt.registerTask('default', ['less', 'postcss', 'cssmin']);
 };
