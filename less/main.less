@@ -153,3 +153,17 @@ h3 {
 .email:before {
 	content: '@';
 }
+
+@media (max-width: 900px) {
+	.main {
+		flex-direction: column;
+	}
+
+	.side, .info {
+		width: 100%;
+	}
+
+	.info section {
+		max-width: initial;
+	}
+}
