@@ -9,12 +9,10 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 html {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   min-height: 100%;
 }
 body {
@@ -60,19 +58,16 @@ a:hover {
   line-height: 60px;
 }
 .main {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 .side {
   text-align: center;
   width: 33%;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .side .caption h1,
 .side .caption h3 {
@@ -151,9 +146,8 @@ h3 {
 }
 @media (max-width: 900px) {
   .main {
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
   }
   .side,
   .info {
